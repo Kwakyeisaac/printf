@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			buffer[buff_ind++] = format[k];
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
-			/* write(1, &format[k], 1);*/
+				/* write(1, &format[k], 1);*/
 			printed_chars++;
 		}
 		else
@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 	}
 	print_buffer(buffer, &buff_ind);
 	va_end(list);
-	return (number of printed_chars);
+	return (printed_chars);
 }
 /**
  * print_buffer - Prints the contents of the buffer if it exist
