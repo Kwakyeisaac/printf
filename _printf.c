@@ -1,13 +1,15 @@
 #include "main.h"
 /**
  * _printf - Printf function
- * @format: format.character strings
+ * @format : format.character strings
  * Return: Number of printed chars.
  */
 int _printf(const char *format, ...)
 {
-unsigned h = 0, r_value = 0;
 va_list args;
+int r_val;
+unsigned h = 0;
+unsigned r_value = 0;
 va_start(args, format);
 for ( ; format[h] != '\0' ; h++)
 {
@@ -22,7 +24,7 @@ h++;
 }
 else if (format[h+1] == 's')
 {
-int r_val = put_s(va_arg(args, char *));
+r_val = put_s(va_arg(args, char *));
 h++;
 r_value += (r_val - 1);
 }
