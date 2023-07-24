@@ -9,6 +9,5 @@
 int putchr(char z);
 int _printf(const char *format, ...);
 int put_s(char *string);
-int put_int(int integer);
 
 #endif /* HEADER_H */
